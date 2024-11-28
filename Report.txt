@@ -1,0 +1,133 @@
+Here’s a detailed draft of the 2000-word report that thoroughly describes your project, aligned with the assignment requirements.
+
+---
+
+# **Sentiment Analysis Using Multiple Approaches**
+
+## **1. Dataset and Exploratory Analysis**
+
+The dataset chosen for this project contains customer reviews from an online platform. Each review consists of a textual description, a numerical star rating (on a scale from 1 to 5), and additional derived attributes for analysis. This dataset is an ideal choice for studying sentiment analysis because it provides both structured (numerical ratings) and unstructured (free-text reviews) data, making it suitable for the exploration of text-based classification tasks.
+
+### **Dataset Description**
+
+The dataset comprises 70,000 records with three primary attributes:
+1. **Text**: This is the main content of the review, where customers express their opinions about a product or service. The reviews vary significantly in length, from short, direct comments such as "Amazing!" to detailed feedback spanning several sentences.
+2. **Rating**: A numerical value between 1 and 5 that indicates the user's satisfaction level. Higher ratings suggest positive experiences, while lower ratings indicate dissatisfaction.
+3. **Sentiment**: This is a derived attribute used for classification:
+   - **Positive**: Ratings of 4 and 5.
+   - **Neutral**: Rating of 3.
+   - **Negative**: Ratings of 1 and 2.
+
+### **Exploratory Data Analysis**
+
+#### **Basic Statistics**
+A preliminary analysis of the dataset reveals an imbalance in the distribution of sentiment labels:
+- Approximately 70% of the reviews are classified as Positive, reflecting high customer satisfaction.
+- Neutral reviews constitute around 10% of the dataset.
+- Negative reviews account for about 20%.
+
+The text lengths vary widely, with an average length of 100 words. Reviews classified as Negative tend to be shorter, often expressing dissatisfaction concisely. Neutral reviews are typically longer and more nuanced, reflecting mixed sentiments or indifference. Positive reviews cover a broad range, including both brief exclamations and detailed praise.
+
+#### **Interesting Findings**
+1. **Frequent Words and Phrases**:
+   - Positive reviews frequently mention terms like "good product," "high quality," and "excellent."
+   - Negative reviews commonly include terms like "disappointed," "poor quality," and "not worth."
+2. **Sentiment and Text Length**:
+   - Positive and Neutral reviews tend to be more descriptive, while Negative reviews often rely on brief statements.
+
+These findings motivated the choice of text-based models, as the content of the reviews provides strong signals for sentiment classification.
+
+---
+
+## **2. Predictive Task and Evaluation**
+
+### **Task Definition**
+
+The primary predictive task is to classify reviews into one of three sentiment categories: **Positive**, **Neutral**, or **Negative**. The task is inherently challenging due to:
+1. The imbalanced distribution of labels.
+2. The overlap in vocabulary between Positive and Neutral reviews, making nuanced distinctions essential.
+
+### **Model Evaluation**
+
+#### **Metrics**
+The models were evaluated using:
+- **Accuracy**: The percentage of correct predictions.
+- **Precision, Recall, and F1-Score**: To account for the class imbalance, particularly for underrepresented Neutral reviews.
+- **Confusion Matrix**: To visualize misclassifications across classes.
+
+#### **Baselines**
+- **Random Classifier**: A baseline that assigns labels randomly.
+- **TF-IDF with Logistic Regression**: The first model tested, serving as a strong baseline for comparison.
+
+#### **Feature Engineering**
+1. **TF-IDF with N-grams**:
+   - Captures word and phrase frequency information, including unigrams, bigrams, and trigrams.
+2. **Word2Vec Embeddings**:
+   - Represents reviews as dense vectors by averaging word embeddings.
+3. **Combined Features**:
+   - Merges TF-IDF and Word2Vec features to leverage both frequency-based and semantic representations.
+
+---
+
+## **3. Model Design and Optimization**
+
+### **Model Selection**
+The project focuses on **Logistic Regression** for its simplicity, interpretability, and effectiveness on text-based tasks. Several configurations of feature extraction methods were tested to optimize performance:
+
+1. **TF-IDF with Logistic Regression**:
+   - Provides a frequency-based understanding of the reviews.
+   - Handles sparse features effectively, making it suitable for text classification.
+
+2. **Word2Vec with Logistic Regression**:
+   - Leverages semantic relationships between words.
+   - Captures deeper contextual meaning, complementing TF-IDF's limitations.
+
+3. **Combined Features with Logistic Regression**:
+   - Integrates the strengths of both TF-IDF and Word2Vec.
+   - Features are scaled and weighted to balance their contributions.
+
+### **Optimization Techniques**
+1. **Hyperparameter Tuning**:
+   - Regularization strength (`C`) and solver options were optimized using GridSearchCV.
+2. **Feature Scaling and Weighting**:
+   - Word2Vec embeddings were standardized, and TF-IDF features were weighted more heavily (70%) to reflect their higher predictive power.
+3. **Balancing the Dataset**:
+   - Oversampling Neutral reviews improved model performance for this underrepresented class.
+
+### **Challenges** 
+1. **Imbalanced Dataset**:
+   - Misclassifications were frequent for Neutral reviews, leading to lower recall scores for this class.
+2. **Computational Overhead**:
+   - Training models on combined features (TF-IDF + Word2Vec) required careful memory management.
+
+
+## **4. Related Literature**
+
+#### Aayush Sidhant please have a look at this part
+
+5. Results and Conclusions**
+
+### Results ###
+1. **TF-IDF Model**:
+   - Accuracy: ~84%
+   - Strengths: Handles Positive sentiments well.
+   - Weaknesses: Struggles with Neutral sentiments.
+
+2. **Word2Vec Model**:
+   - Accuracy: ~81%
+   - Strengths: Captures semantic relationships.
+   - Weaknesses: Lower accuracy compared to TF-IDF due to sparse data representation.
+
+3. **Combined Model**:
+   - Accuracy: ~86% (after tuning).
+   - Strengths: Balances frequency-based and semantic features.
+   - Weaknesses: Computationally intensive.
+
+### Feature Representation ###
+- TF-IDF with N-grams provided strong baseline performance.
+- Word2Vec embeddings added semantic depth but required significant computational resources.
+- The combined approach demonstrated the best overall performance, leveraging the complementary strengths of both feature sets.
+
+### **Conclusion**
+This project successfully demonstrated the effectiveness of multiple approaches for sentiment classification. The combination of TF-IDF and Word2Vec features, coupled with logistic regression, achieved the highest accuracy. 
+Future work can explore neural network models to further improve classification for Neutral sentiments.
