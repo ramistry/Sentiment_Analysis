@@ -7,13 +7,12 @@ Repo for creating ANN for classifying.
 This project aims to build a robust sentiment analysis model to classify reviews into Positive, Neutral, or Negative sentiments using a variety of machine learning techniques. 
 The project explores different feature extraction methods and evaluates their individual and combined performances..
 <br />
-<br />
+
 ## 2. Key objectives
 
 -Build models using TF-IDF, Word2Vec embeddings, and their combination for sentiment classification.
 -Compare the performance of these approaches using logistic regression.
 -Highlight techniques that contribute most to improving sentiment classification.
-<br />
 
 ## 3. Dataset
 
