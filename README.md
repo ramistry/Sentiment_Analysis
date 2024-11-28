@@ -1,5 +1,5 @@
-# NocturnalNeuro
-Repo for creating ANN for classifying.
+# Sentiment Analysis Using Multiple Approaches
+
 
 
 ## 1. Background and Motivation
