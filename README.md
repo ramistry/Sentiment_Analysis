@@ -35,15 +35,15 @@ The project repository is structured as follows:
  * Captures term frequency and importance in the corpus.
 
 *`Word2Vec Embeddings`:
-  *Learns dense vector representations of words.
-  *Combines word embeddings to create document-level embeddings by averaging word vectors.
+  * Learns dense vector representations of words.
+  * Combines word embeddings to create document-level embeddings by averaging word vectors.
 
 *`Combined Features:`
   * Combines scaled Word2Vec embeddings with TF-IDF features to capture both semantic and frequency-based relationships.
 
 ## 4. Models
 * `Logistic Regression:`
-**   Used for all experiments (TF-IDF, Word2Vec, and Combined Features).
+  *Used for all experiments (TF-IDF, Word2Vec, and Combined Features).
   
 ## Technologies Used
 * `Python`: Programming language for the project.
