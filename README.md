@@ -31,8 +31,8 @@ The dataset used contains customer reviews with the following key columns:
 The project repository is structured as follows:
 
 *`TF-IDF with N-grams:` 
-** Extracts word-level features (unigrams, bigrams, trigrams).
-** Captures term frequency and importance in the corpus.
+* * Extracts word-level features (unigrams, bigrams, trigrams).
+* * Captures term frequency and importance in the corpus.
 
 *`Word2Vec Embeddings`:
 **Learns dense vector representations of words.
