@@ -10,9 +10,9 @@ The project explores different feature extraction methods and evaluates their in
 
 ## 2. Key objectives
 
--Build models using TF-IDF, Word2Vec embeddings, and their combination for sentiment classification.
--Compare the performance of these approaches using logistic regression.
--Highlight techniques that contribute most to improving sentiment classification.
+* Build models using TF-IDF, Word2Vec embeddings, and their combination for sentiment classification.
+* Compare the performance of these approaches using logistic regression.
+* Highlight techniques that contribute most to improving sentiment classification.
 
 ## 3. Dataset
 
