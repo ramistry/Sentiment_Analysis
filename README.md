@@ -44,3 +44,9 @@ The project repository is structured as follows:
 ## 4. Models
 * `Logistic Regression:`
 **   Used for all experiments (TF-IDF, Word2Vec, and Combined Features).
+  
+## Technologies Used
+* `Python`: Programming language for the project.
+* `Scikit-learn`: For TF-IDF, logistic regression, and evaluation metrics.
+* `Gensim`: For training and using Word2Vec embeddings.
+* `Matplotlib/Seaborn`: For plotting confusion matrices and visualizing results.
