@@ -1,7 +1,6 @@
 # Sentiment Analysis Using Multiple Approaches
 
 
-
 ## 1. Background and Motivation
 <br />
 This project aims to build a robust sentiment analysis model to classify reviews into Positive, Neutral, or Negative sentiments using a variety of machine learning techniques. 
@@ -50,3 +49,9 @@ The project repository is structured as follows:
 * `Scikit-learn`: For TF-IDF, logistic regression, and evaluation metrics.
 * `Gensim`: For training and using Word2Vec embeddings.
 * `Matplotlib/Seaborn`: For plotting confusion matrices and visualizing results.
+
+
+
+
+
+### By : Rahul Mistry, Sithu Soe, Aayush Motiani, Sidhant Rohatgi
