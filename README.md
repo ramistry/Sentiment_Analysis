@@ -16,6 +16,7 @@ The project explores different feature extraction methods and evaluates their in
 ## 3. Dataset
 
 The dataset used contains customer reviews with the following key columns:
+
 `text`: The gender of the individual (M/F).
 
 `rating`: The star rating assigned to the review (1–5).
